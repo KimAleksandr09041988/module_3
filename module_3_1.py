@@ -11,19 +11,14 @@ def string_info(string_):
 
 def is_contains(string_, list_to_search):
     count_calls()
+    bool_ = False
     for item in list_to_search:
-        if string_.lower() in item.lower():
-            return True
-        else:
-            return False
+        if string_.lower() == item.lower():
+            bool_ = True
+    return  bool_
 
-
-string_1 = 'HeLlo'
-list_ = ['hello', 'woRld']
-
-print(is_contains(string_1, list_))
-print(string_info('Hello'))
-print(string_info('Hello'))
-print(string_info('Hello'))
-print(string_info('Hello'))
+print(string_info('Capybara'))
+print(string_info('Armageddon'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
+print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
 print(calls)
